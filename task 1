@@ -1,0 +1,33 @@
+import math 
+  
+a = int(input())
+b=int(input())
+c=int(input())
+if a == 0: 
+        print("Incorrect input") 
+else:
+    equationroots(a, b, c)  
+# function for find roots 
+
+def equationroots( a, b, c): 
+  
+   
+    root = b * b - 4 * a * c 
+    square_val = math.sqrt(abs(root)) 
+      
+   
+    if root > 0: 
+        print(" real and different roots ") 
+        print((-b +square_val)/(2 * a)) 
+        print((-b - square_val)/(2 * a)) 
+      
+    elif root == 0: 
+        print("same roots") 
+        print(-b / (2 * a)) 
+      
+    
+    else:
+        print("Complex Roots") 
+        print(- b / (2 * a), " + i", square_val) 
+        print(- b / (2 * a), " - i", square_val) 
+
